@@ -328,5 +328,86 @@ Console<span class="token punctuation">.</span><span class="token function">Writ
 <p><code>(age &gt;= 18)</code> shart<br>
 <code>?</code> agar shart to‘g‘ri bo‘lsa birinchi qiymat ishlaydi<br>
 <code>:</code> aks holda ikkinchi qiymat ishlaydi</p>
-<p>Keyingi mavzularda buni to‘liq tushunib olishimiz mumkin</p>
+<h4 id="keyingi-mavzularda-buni-to‘liq-tushunib-olishimiz-mumkin">Keyingi mavzularda buni to‘liq tushunib olishimiz mumkin</h4>
+<hr>
+<h2 id="funksiyalar-va-operatorlar">Funksiyalar va operatorlar</h2>
+<p>C# dagi operatorlar bir necha turga bo‘linadi</p>
+<h3 id="arifmetik-operatorlar">Arifmetik operatorlar</h3>
+<p>Operator</p>
+<p>Izoh</p>
+<ul>
+<li></li>
+</ul>
+<p>qo‘shish <code>2 + 5</code>, satrlarda ham ishlaydi <code>"salom" + "dunyo"</code></p>
+<ul>
+<li></li>
+</ul>
+<p>ayirish <code>299 - 176</code></p>
+<ul>
+<li></li>
+</ul>
+<p>ko‘paytirish <code>3 * 2</code></p>
+<p>/</p>
+<p>bo‘lish <code>13 / 4</code> (natija 3)</p>
+<p>%</p>
+<p>qoldiqli bo‘lish <code>13 % 4</code> (natija 1)</p>
+<p>++</p>
+<p>qiymatni birga oshirish <code>age++</code></p>
+<p>–</p>
+<p>qiymatni birga kamaytirish <code>requestlimit--</code></p>
+<p>+= value</p>
+<p>oldingi qiymatga qo‘shadi, satrlarda ham ishlaydi</p>
+<p>-= value</p>
+<p>oldingi qiymatdan ayiradi</p>
+<p>*= value</p>
+<p>oldingi qiymatga ko‘paytiradi</p>
+<p>/= value</p>
+<p>oldingi qiymatni bo‘lish</p>
+<p>%= value</p>
+<p>oldingi qiymatdan qoldiqni olish</p>
+<ul>
+<li>
+<p><code>++</code> va <code>--</code> <strong>inkrement/dekrement</strong> operatorlari hisoblanadi</p>
+</li>
+<li>
+<p><strong>Pre-inkrement/dekrement</strong> qiymatni oldin oshiradi yoki kamaytiradi va keyin natijani beradi</p>
+</li>
+</ul>
+<p><code>int age = 5; int newAge = ++age; // age oldin 6 bo‘ladi, newAge ham 6</code></p>
+<ul>
+<li><strong>Post-inkrement/dekrement</strong> natijani oldin beradi, keyin qiymatni oshiradi yoki kamaytiradi</li>
+</ul>
+<p><code>int id = 3; string username = $"eser{id++}"; // username "eser3", id keyin 4 bo‘ladi</code></p>
+<hr>
+<h3 id="shart-operatorlari">Shart operatorlari</h3>
+<p>Shartlar <code>bool</code> toifasi orqali belgilanadi va <strong>true yoki false</strong> qiymat oladi</p>
+<p>Operator</p>
+<p>Ma’no</p>
+<p>==</p>
+<p>tenglik</p>
+<p>!=</p>
+<p>teng emas</p>
+<blockquote></blockquote>
+<p>katta</p>
+<p>&lt;</p>
+<p>kichik</p>
+<blockquote>
+<p>=</p>
+</blockquote>
+<p>katta yoki teng</p>
+<p>&lt;=</p>
+<p>kichik yoki teng</p>
+<p>&amp;&amp;</p>
+<p>mantiqiy va (AND), har ikkala shart true bo‘lsa true</p>
+<p>!</p>
+<p>mantiqiy inkor (NOT), true ni false qiladi va aksincha</p>
+<p><code>int age = 20; bool canEnter = (age &gt;= 18) &amp;&amp; (age &lt; 60); // 18 dan katta va 60 dan kichik bo‘lsa true bool isMinor = !(age &gt;= 18); // age 18 dan kichik bo‘lsa true</code></p>
+<ul>
+<li>
+<p><code>&amp;&amp;</code> va <code>||</code> operatorlari <strong>mantiqiy shartlarni birlashtirish</strong>da ishlatiladi</p>
+</li>
+<li>
+<p><code>!</code> operatori <strong>shartni teskari qiladi</strong></p>
+</li>
+</ul>
 
