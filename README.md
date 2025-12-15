@@ -119,7 +119,7 @@
 <p><strong>Standart sinflar va metodlar</strong> esa odatda <strong>bosh harf bilan</strong> boshlanadi (<code>Console</code>, <code>WriteLine</code>).</p>
 </li>
 <li>
-<p>Ushbu yozish qoidalariga rioya qilish — C# da <strong>yaxshi amaliyot (best practice)</strong> hisoblanadi va keyinchalik ham shunga amal qilish tavsiya etiladi.</p>
+<p>Ushbu yozish qoidalariga rioya qilish — C# da <strong>yaxshi amaliyot</strong> hisoblanadi va keyinchalik ham shunga amal qilish tavsiya etiladi.</p>
 </li>
 </ul>
 <h3 id="console.writeline-haqida"><code>Console.WriteLine</code> haqida</h3>
@@ -134,8 +134,9 @@
 <pre><code>int son = 10;
 Console.WriteLine(son);
 </code></pre>
-<h2 id="o‘zgaruvchi-turlari">O‘zgaruvchi turlari</h2>
-<p><strong>C#</strong> dasturlash tili bir nechta asosiy <strong>o‘zgaruvchi turlariga (data types)</strong> ega. Quyidagi jadvalda eng ko‘p ishlatiladigan turlar keltirilgan:</p>
+<hr>
+<h2 id="o‘zgaruvchi-turlari-c">O‘zgaruvchi turlari (C#)</h2>
+<p>C# tili quyidagi asosiy o‘zgaruvchi turlariga ega:</p>
 
 <table>
 <thead>
@@ -201,7 +202,7 @@ Console.WriteLine(son);
 <p>Shu kombinatsiyalar yordamida belgilar maxsus kodlar orqali ifodalanadi. Masalan:</p>
 <ul>
 <li>
-<p><code>'A'</code> belgisi ma’lum bir <strong>sonli kodga</strong></p>
+<p><code>'A'</code> belgisi ma’lum bir <strong>sonli kodga</strong> (<code>00100001</code>)</p>
 </li>
 <li>
 <p>bu kod esa <strong>ikkilik sanoq sistemasida</strong> <code>0</code> va <code>1</code> lar ketma-ketligiga mos keladi</p>
@@ -230,4 +231,102 @@ Juda yuqori aniqlik talab qilinadigan holatlarda (masalan, <strong>moliyaviy his
 </ul>
 <p>Misol:</p>
 <p><code>int a = 10; double b = 3.14; decimal c = 99.99m;</code></p>
+<h3 id="muhim-eslatma">Muhim eslatma</h3>
+<p>Boshlang‘ich C# dasturlash uchun <strong>Visual Studio Code (VS Code)</strong> yengilroq va qulayroq. Ammo odatda <strong>Visual Studio Community</strong> versiyasidan foydalanish tavsiya qilinadi, agar sizning kompyuteringizda yetarli resurslar mavjud bo‘lsa.</p>
+<p><strong>Sababi:</strong> Visual Studio sizga <strong>real CMD konsol muhitini</strong> chaqirish imkonini beradi va loyihalarni boshqarish, debugging, GUI ilovalar yaratish kabi imkoniyatlarni kengaytiradi.</p>
+<p><strong>O‘rnatish uchun:</strong> <a href="https://visualstudio.microsoft.com/vs/community/">Visual Studio Community rasmiy sayti</a></p>
+<blockquote>
+<p>💡 Agar kompyuteringiz resurs jihatdan cheklangan bo‘lsa, avval VS Code bilan boshlash mumkin, keyin kerak bo‘lsa Visual Studio Community’ga o‘tish mumkin.</p>
+</blockquote>
+<hr>
+<h2 id="malumot-turlarini-elon-qilish-va-casting">Ma’lumot turlarini e’lon qilish va casting</h2>
+<p>C# tilida <strong>o‘zgaruvchi turini belgilash qat’iy shart</strong>. Masalan:</p>
+<pre class=" language-c"><code class="prism # language-c"><span class="token keyword">int</span> number <span class="token operator">=</span> <span class="token number">123</span><span class="token punctuation">;</span> 
+<span class="token keyword">long</span> lnumber <span class="token operator">=</span> <span class="token number">1234567890L</span><span class="token punctuation">;</span> 
+<span class="token keyword">double</span> dnumber <span class="token operator">=</span> <span class="token number">456.789</span><span class="token punctuation">;</span> 
+<span class="token keyword">float</span> fnumber <span class="token operator">=</span> <span class="token number">534.213f</span><span class="token punctuation">;</span> 
+decimal mnumber <span class="token operator">=</span> <span class="token number">987</span><span class="token punctuation">.</span>654321m<span class="token punctuation">;</span> 
+string text <span class="token operator">=</span> <span class="token string">"HMMM"</span><span class="token punctuation">;</span> 
+<span class="token keyword">char</span> symbol <span class="token operator">=</span> <span class="token string">'*'</span><span class="token punctuation">;</span>
+</code></pre>
+<h3 id="qiymat-berish">Qiymat berish</h3>
+<p>Standart turlarda qiymat <strong>e’lon vaqtida</strong> yoki <strong>keyinroq</strong> berish mumkin. Har bir buyruq <code>;</code> bilan tugashi shart.</p>
+<pre><code>int a; // e’lon qilish 
+a = 666; // keyin qiymat berish  
+// yoki bir qatorda bir nechta o‘zgaruvchi  
+int x = 1, y = 2;
+</code></pre>
+<hr>
+<h3 id="izohlar-comments">Izohlar (Comments)</h3>
+<p>Izohlar dastur bajarilishiga ta’sir qilmaydi.</p>
+<ul>
+<li><strong>Bir qatorli izoh:</strong> <code>//</code></li>
+</ul>
+<pre><code>// Console.WriteLine("Salom"); 
+Console.Write("Asadbek");
+</code></pre>
+<p><strong>Natija:</strong></p>
+<p><code>Asadbek</code></p>
+<ul>
+<li><strong>Ko‘p qatorli izoh:</strong> <code>/* ... */</code></li>
+</ul>
+<pre><code>/*
+Bu yer bajarilmaydi:
+savollar: axadiostudios@gmail.com
+*/
+</code></pre>
+<hr>
+<h2 id="casting-tiplarni-o‘zgartirish">Casting (tiplarni o‘zgartirish)</h2>
+<p><strong>Casting</strong> — bir turdagi ma’lumotni boshqa turga aylantirish.</p>
+<h3 id="avtomatik-implicit-casting">Avtomatik (Implicit) casting</h3>
+<ul>
+<li>Kichik turdagi sonni katta turga avtomatik o‘tkazish mumkin (<code>int -&gt; long</code>, <code>float -&gt; double</code>).</li>
+</ul>
+<p><code>int i = 100; double d = i; // avtomatik Console.WriteLine(d); // 100</code></p>
+<h3 id="qo‘lda-explicit-casting">Qo‘lda (Explicit) casting</h3>
+<ul>
+<li>Katta turdagi sonni kichik turga yoki mos kelmaydigan turga o‘tkazishda <strong>qo‘lda</strong> qilish kerak.</li>
+</ul>
+<p><code>double d = 123.456; int i = (int)d; // explicit casting Console.WriteLine(i); // 123 (kasr qismi yo‘qoladi)</code></p>
+<h3 id="ba’zi-misollar">Ba’zi misollar</h3>
+<p><code>float f = 3.14f; double d = f; // implicit double x = 9.78; int y = (int)x; // explicit</code></p>
+<blockquote>
+<p>💡 Eslatma: Explicit castingda <strong>ma’lumot yo‘qolishi yoki qisqarishi</strong> mumkin.</p>
+</blockquote>
+<hr>
+<h2 id="kiritish">Kiritish</h2>
+<p>Agar dastur muhitini o‘rnatib bo‘lgan bo‘lsangiz boshlaymiz</p>
+<pre><code>using System;
+namespace SampleApp 
+{ 
+class Program 
+	{ 
+		static void Main(string[] args)
+		{ 
+			string UserName = Console.ReadLine();
+			Console.WriteLine($"Salom {UserName}!")
+    }
+  }
+}
+</code></pre>
+<p><code>Console.ReadLine()</code> foydalanuvchidan ma’lumot oladi va har doim string sifatida qaytaradi<br>
+Agar raqam kiritilsa ham string sifatida olinadi shuning uchun quyidagicha yozish xato</p>
+<pre class=" language-c"><code class="prism # language-c"><span class="token keyword">int</span> age <span class="token operator">=</span> Console<span class="token punctuation">.</span><span class="token function">ReadLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// xato</span>
+</code></pre>
+<p><code>$</code> belgisi formatli satr yaratadi ya’ni <code>{}</code> ichidagi qiymat chiqariladi</p>
+<pre class=" language-c"><code class="prism # language-c"><span class="token keyword">int</span> kun <span class="token operator">=</span> <span class="token number">16</span><span class="token punctuation">;</span>
+Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span>$<span class="token string">"{kun} dekabr"</span><span class="token punctuation">)</span>
+</code></pre>
+<p>string va int turini birlashtirish uchun ham <code>$</code> ishlatish qulay</p>
+<pre class=" language-c"><code class="prism # language-c">string name <span class="token operator">=</span> <span class="token string">"Asadbek"</span><span class="token punctuation">;</span> <span class="token keyword">int</span> age <span class="token operator">=</span> <span class="token number">21</span><span class="token punctuation">;</span>
+Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span>$<span class="token string">"{name}  {age} yoshda"</span><span class="token punctuation">)</span>
+</code></pre>
+<p>Agar konsoldan haqiqiy raqam kiritish kerak bo‘lsa <code>Convert</code> sinfidan foydalanamiz</p>
+<pre class=" language-c"><code class="prism # language-c"><span class="token keyword">int</span> age <span class="token operator">=</span> Convert<span class="token punctuation">.</span><span class="token function">ToInt32</span><span class="token punctuation">(</span>Console<span class="token punctuation">.</span><span class="token function">ReadLine</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token punctuation">(</span>age <span class="token operator">&gt;=</span> <span class="token number">18</span><span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token string">"kirishingiz mumkin"</span> <span class="token punctuation">:</span> <span class="token string">"yosh cheklovi"</span><span class="token punctuation">)</span>
+</code></pre>
+<p><code>(age &gt;= 18)</code> shart<br>
+<code>?</code> agar shart to‘g‘ri bo‘lsa birinchi qiymat ishlaydi<br>
+<code>:</code> aks holda ikkinchi qiymat ishlaydi</p>
+<p>Keyingi mavzularda buni to‘liq tushunib olishimiz mumkin</p>
 
