@@ -131,5 +131,103 @@
 <p>Yoki matn chiqarish uchun:</p>
 <p><code>Console.WriteLine("Bu matn");</code></p>
 <p>Shuningdek, o‘zgaruvchilarni ham chiqarish mumkin:</p>
-<p><code>int son = 10; Console.WriteLine(son);</code></p>
+<pre><code>int son = 10;
+Console.WriteLine(son);
+</code></pre>
+<h2 id="o‘zgaruvchi-turlari">O‘zgaruvchi turlari</h2>
+<p><strong>C#</strong> dasturlash tili bir nechta asosiy <strong>o‘zgaruvchi turlariga (data types)</strong> ega. Quyidagi jadvalda eng ko‘p ishlatiladigan turlar keltirilgan:</p>
+
+<table>
+<thead>
+<tr>
+<th>Tur</th>
+<th>Tavsif</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td>Butun sonlar</td>
+</tr>
+<tr>
+<td><code>float</code></td>
+<td>Kasrli son (kam aniqlik)</td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td>Kasrli son (yuqori aniqlik)</td>
+</tr>
+<tr>
+<td><code>decimal</code></td>
+<td>Juda yuqori aniqlikdagi sonlar</td>
+</tr>
+<tr>
+<td><code>string</code></td>
+<td>Matn (satr)</td>
+</tr>
+<tr>
+<td><code>char</code></td>
+<td>Bitta belgi</td>
+</tr>
+</tbody>
+</table><p>Bu turlarni o‘rganishdan oldin <strong>o‘zgaruvchi</strong> va <strong>o‘zgarmas (konstanta)</strong> tushunchalarini ko‘rib chiqamiz.</p>
+<hr>
+<h3 id="o‘zgaruvchilar-va-o‘zgarmaslar">O‘zgaruvchilar va o‘zgarmaslar</h3>
+<p><strong>O‘zgaruvchi</strong> — dastur davomida e’lon qilinib, uning qiymatini <strong>o‘zgartirish mumkin</strong> bo‘lgan xotira joyidir.</p>
+<p>Masalan:</p>
+<p><code>int yosh = 18; yosh = 19;</code></p>
+<p>Bu yerda <code>yosh</code> o‘zgaruvchisining qiymati dastur davomida o‘zgartirildi.</p>
+<p><strong>O‘zgarmaslar (konstantalar)</strong> esa faqat <strong>bir marta e’lon qilinadi</strong> va keyinchalik ularning qiymatini o‘zgartirib bo‘lmaydi. Dastur davomida qiymati <strong>doim bir xil</strong> bo‘lib qoladi.</p>
+<p><code>const int MaksimalYosh = 100;</code></p>
+<hr>
+<h3 id="char-tipi-haqida"><code>char</code> tipi haqida</h3>
+<p><code>char</code> — <strong>bitta belgini</strong> saqlash uchun mo‘ljallangan turdir:</p>
+<p><code>char belgi = 'A';</code></p>
+<p>Texnik jihatdan <code>char</code> ham <strong>raqamli tur</strong> hisoblanadi. Har bir belgi kompyuter xotirasida <strong>son ko‘rinishida</strong> saqlanadi.</p>
+<h4 id="bit-va-bayt-tushunchasi">Bit va bayt tushunchasi</h4>
+<ul>
+<li>
+<p><strong>Bit</strong> — eng kichik axborot birligi (<code>0</code> yoki <code>1</code>)</p>
+</li>
+<li>
+<p><strong>Bayt</strong> — 8 ta bitdan iborat</p>
+</li>
+</ul>
+<p>Demak:</p>
+<p><code>1 bayt = 8 bit</code></p>
+<p>8 ta bit yordamida:</p>
+<p><code>2⁸ = 256 ta turli kombinatsiya</code></p>
+<p>hosil qilish mumkin.</p>
+<p>Shu kombinatsiyalar yordamida belgilar maxsus kodlar orqali ifodalanadi. Masalan:</p>
+<ul>
+<li>
+<p><code>'A'</code> belgisi ma’lum bir <strong>sonli kodga</strong></p>
+</li>
+<li>
+<p>bu kod esa <strong>ikkilik sanoq sistemasida</strong> <code>0</code> va <code>1</code> lar ketma-ketligiga mos keladi</p>
+</li>
+</ul>
+<p>Xuddi shu prinsip sonlar uchun ham amal qiladi.</p>
+<hr>
+<h3 id="sonli-turlar-haqida-qisqacha">Sonli turlar haqida qisqacha</h3>
+<ul>
+<li>
+<p><strong><code>int</code></strong><br>
+4 bayt (32 bit) joy egallaydi va <strong>butun sonlarni</strong> saqlaydi.</p>
+</li>
+<li>
+<p><strong><code>float</code></strong><br>
+Kasrli sonlar uchun ishlatiladi, lekin aniqligi pastroq.</p>
+</li>
+<li>
+<p><strong><code>double</code></strong><br>
+<code>float</code> ga nisbatan <strong>aniqligi yuqori</strong>, ko‘pincha standart tanlov hisoblanadi.</p>
+</li>
+<li>
+<p><strong><code>decimal</code></strong><br>
+Juda yuqori aniqlik talab qilinadigan holatlarda (masalan, <strong>moliyaviy hisob-kitoblar</strong>) ishlatiladi.</p>
+</li>
+</ul>
+<p>Misol:</p>
+<p><code>int a = 10; double b = 3.14; decimal c = 99.99m;</code></p>
 
