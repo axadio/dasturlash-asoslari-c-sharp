@@ -79,4 +79,57 @@
 <p><strong>C++ bilan boshlash ko‘pchilik uchun qiyin bo‘ladi.</strong> Murakkab sintaksis, qo‘lda xotira boshqaruvi, ko‘p texnik tafsilotlar boshlang‘ich bosqichda o‘rganishni og‘irlashtiradi. C# esa shu qiyinchiliklarni ancha soddalashtiradi, tushunarliroq, zamonaviyroq va ixcham yozish imkonini beradi. Shu sababli boshlang‘ich bosqichda C# bilan ishlash yoqimli va samarali bo‘ladi.</p>
 <p>Bugungi kunda C# yordamida <strong>Windows ilovalari, veb-saytlar, mobil ilovalar, hamda ayniqsa o‘yinlar</strong> ishlab chiqiladi. Hozirgi AAA o‘yinlarning katta qismi yoki Unity platformasida, yoki .NET texnologiyalari yordamida tayyorlanadi. Buning sababi — C#ning keng qamrovli ekotizimi, tez ishlab chiqish imkoniyatlari va “<strong>bir marta yozing — ko‘p platformada ishlating</strong>” falsafasidir.</p>
 <p>Shu bilan, biz C# bilan dasturlash asoslarini o‘rganishni boshlaymiz.</p>
+<hr>
+<h2 id="til-sintaksisi">Til sintaksisi</h2>
+<p><strong>C#</strong> dasturlash tili <strong>katta va kichik harflarni farqlaydi</strong>. Ya’ni <code>KattaHarf</code> va <code>kattaharf</code> — <strong>ikki xil nom</strong> hisoblanadi. Shu sababli o‘zgaruvchi, funksiya va sinf nomlarini yozishda harflar registriga doimo e’tibor berish kerak.</p>
+<p>O‘zgaruvchilarni nomlashda odatda ikki xil uslub qo‘llaniladi:</p>
+<ul>
+<li>
+<p><strong>pastki chiziq</strong> yordamida:</p>
+<p><code>mening_yoshim</code></p>
+</li>
+<li>
+<p><strong>bir nechta so‘zdan iborat nomlarda har bir so‘zni bosh harf bilan yozish</strong> (CamelCase yoki PascalCase):</p>
+<p><code>meningYoshim</code></p>
+</li>
+</ul>
+<p>Bu uslublar kodni o‘qilishi va tushunilishini ancha osonlashtiradi.</p>
+<h3 id="oddiy-c-dasturiga-misol">Oddiy C# dasturiga misol</h3>
+<p>Quyida C# tilida yozilgan eng oddiy dastur namunasi keltirilgan:</p>
+<pre class=" language-c"><code class="prism # language-c">namespace  MyApp 
+<span class="token punctuation">{</span> 
+	public  class  Program 
+	<span class="token punctuation">{</span> 
+		public  <span class="token keyword">static</span>  <span class="token keyword">void</span>  <span class="token function">Main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+			Console<span class="token punctuation">.</span><span class="token function">WriteLine</span><span class="token punctuation">(</span><span class="token string">"Salom, Dunyo!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Bu dastur ekranga <strong>“Salom, Dunyo!”</strong> matnini chiqaradi.</p>
+<p>Agar kodni soddaroq ko‘rinishda yozmoqchi bo‘lsak, quyidagi ifoda ham yetarli bo‘ladi:</p>
+<p><code>Console.WriteLine("Salom, Dunyo!");</code></p>
+<h3 id="muhim-eslatmalar">Muhim eslatmalar</h3>
+<ul>
+<li>
+<p><strong>Kalit so‘zlar</strong> (<code>namespace</code>, <code>class</code>, <code>public</code>, <code>static</code>, <code>void</code> va hokazo) <strong>kichik harflarda</strong> yoziladi.</p>
+</li>
+<li>
+<p><strong>Standart sinflar va metodlar</strong> esa odatda <strong>bosh harf bilan</strong> boshlanadi (<code>Console</code>, <code>WriteLine</code>).</p>
+</li>
+<li>
+<p>Ushbu yozish qoidalariga rioya qilish — C# da <strong>yaxshi amaliyot (best practice)</strong> hisoblanadi va keyinchalik ham shunga amal qilish tavsiya etiladi.</p>
+</li>
+</ul>
+<h3 id="console.writeline-haqida"><code>Console.WriteLine</code> haqida</h3>
+<p><code>Console.WriteLine()</code> metodi qavs ichidagi qiymatni <strong>ekranga chiqarish</strong> uchun ishlatiladi.</p>
+<p>Masalan:</p>
+<p><code>Console.WriteLine(1 + 1);</code></p>
+<p>Natija:</p>
+<p><code>2</code></p>
+<p>Yoki matn chiqarish uchun:</p>
+<p><code>Console.WriteLine("Bu matn");</code></p>
+<p>Shuningdek, o‘zgaruvchilarni ham chiqarish mumkin:</p>
+<p><code>int son = 10; Console.WriteLine(son);</code></p>
 
