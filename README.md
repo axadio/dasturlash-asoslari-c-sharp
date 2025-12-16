@@ -401,7 +401,10 @@ Console<span class="token punctuation">.</span><span class="token function">Writ
 <p>mantiqiy va (AND), har ikkala shart true bo‘lsa true</p>
 <p>!</p>
 <p>mantiqiy inkor (NOT), true ni false qiladi va aksincha</p>
-<p><code>int age = 20; bool canEnter = (age &gt;= 18) &amp;&amp; (age &lt; 60); // 18 dan katta va 60 dan kichik bo‘lsa true bool isMinor = !(age &gt;= 18); // age 18 dan kichik bo‘lsa true</code></p>
+<pre class=" language-c"><code class="prism # language-c"><span class="token keyword">int</span> age <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+bool canEnter <span class="token operator">=</span> <span class="token punctuation">(</span>age <span class="token operator">&gt;=</span> <span class="token number">18</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>age <span class="token operator">&lt;</span> <span class="token number">60</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 18 dan katta va 60 dan kichik bo‘lsa true  </span>
+bool isMinor <span class="token operator">=</span> <span class="token operator">!</span><span class="token punctuation">(</span>age <span class="token operator">&gt;=</span> <span class="token number">18</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// age 18 dan kichik bo‘lsa true`</span>
+</code></pre>
 <ul>
 <li>
 <p><code>&amp;&amp;</code> va <code>||</code> operatorlari <strong>mantiqiy shartlarni birlashtirish</strong>da ishlatiladi</p>
